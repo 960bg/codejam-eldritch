@@ -1,0 +1,662 @@
+/* <Обнуление стилей _start */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:after,
+*:before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+a:focus,
+:active,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+figure {
+  display: block;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* <Обнуление стилей _end */
+
+/* подключение шрифтов _start */
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url(../fonts/Montserrat-Black.ttf);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat-ExtraLight.ttf);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat-Thin.ttf);
+  font-weight: 100;
+}
+
+/* подключение шрифтов _end */
+
+
+/* стиль для ф-и Скрыть \ показать блок _start*/
+.opacity-block {
+  opacity: 0.5;
+}
+
+/* скрытый блок */
+.hide-block {
+  opacity: 0;
+  z-index: -1;
+}
+
+/* неактивный блок */
+.inactive-block {
+  z-index: -1;
+}
+
+.absolute {
+  position: fixed;
+  left: -500%;
+}
+
+.smooth {
+  transition: all 1s ease;
+}
+
+/* стиль для ф-и Скрыть \ показать блок _end*/
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+
+
+  font-size: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
+  line-height: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  /* height: 100%; */
+  /* height: 100vh; */
+  position: relative;
+
+  /* background-size: cover; */
+  background-color: black;
+  /* background-image: url('../img/bg'); */
+  background-repeat: repeat;
+  transition: all 0.4s ease-in-out;
+  /* overflow: hidden; */
+  margin: 0 auto;
+
+
+}
+
+/* эффект смены картинок */
+body::after {
+  background-color: rgba(240, 248, 255, 0.7);
+}
+
+
+/* <!-- оболочка _start--> */
+.wrapper {
+  display: flex;
+  /* align-self: flex-start; */
+  /* Чтобы занимал оставшееся пространство */
+  flex: 1 1 auto;
+  /* height: 100%; */
+  /* height: 90vh; */
+  /* height: 600px; */
+  min-width: 320px;
+  max-width: 1440px;
+  padding: 10px;
+  /* margin: 0 auto; */
+  overflow: hidden;
+}
+
+.application {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+
+/* <!-- блок footer _start--> */
+.footer {
+  display: flex;
+  justify-content: center;
+  /* min-height: 60px; */
+  /* background-color: rgba(184, 134, 11, 0.4); */
+  padding: 7px;
+}
+
+.footer_socia {
+  display: flex;
+  width: 250px;
+  justify-content: center;
+}
+
+.footer_ul {
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social__year {
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.rs_school {
+  /* width: 100px; */
+  height: 25px;
+  filter: invert();
+  transition: all 0.4s;
+}
+
+/* иконки ссылок */
+.soc_li_img {
+  height: 25px;
+}
+
+.rs_school:hover {
+
+  transform: scale(1.2);
+}
+
+.git-hub {
+  width: 25px;
+  filter: invert();
+  transition: all 0.4s;
+}
+
+.git-hub:hover {
+  transform: scale(1.2);
+}
+
+/* <!-- блок footer _end--> */
+
+
+/* <!-- оболочка _end--> */
+
+/* -- список карт древних _start --> */
+.ancients {
+  display: flex;
+  flex-direction: column;
+  width: 33.333%;
+  /* flex-wrap: wrap; */
+}
+
+.ancients__item {
+  position: relative;
+  display: flex;
+  width: calc(90px + (240 - 90) * ((100vw - 320px) / (1440 - 320)));
+  /* height: calc(200px + (290 - 200) * ((100vh - 650px) / (900 - 650))); */
+  border-radius: 5px;
+  box-shadow: 12px 12px 10px rgba(0, 0, 0, 0.337);
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.7s ease-in-out;
+
+
+}
+
+.ancients__item:not(:first-child) {
+  margin-top: -30%;
+}
+
+.ancients__item:hover:not(.ancients__item-active) {
+  margin-left: 15px;
+  margin-bottom: calc(10px + (50 - 10) * ((100vw - 320px) / (1440 - 320)));
+  transform: scale(1.2);
+  z-index: 2;
+}
+
+.ancients__item:hover:not(.ancients__item-active):nth-child(1) {
+  margin-left: 15px;
+  margin-bottom: calc(10px + (50 - 10) * ((100vw - 320px) / (1440 - 320)));
+  margin-top: calc(10px + (50 - 10) * ((100vw - 320px) / (1440 - 320)));
+  transform: scale(1.2);
+  z-index: 2;
+}
+
+.ancients__item-active {
+
+  margin-left: calc(30px + (155 - 30) * ((100vw - 320px) / (1440 - 320)));
+  /* border: calc(2px + (18 - 2) * ((100vw - 320px) / (1440 - 320))) ridge rgb(95, 94, 94); */
+  transform: scale(1.3);
+  /* width: 100%; */
+  z-index: 1;
+}
+
+.ancients__item-active:nth-child(1) {
+  margin-top: 10%;
+
+}
+
+.ancients__item-active:nth-child(4) {
+  margin-top: -70%;
+
+}
+
+.ancients__item__img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+/* -- список карт древних _end --> */
+
+
+/* БЛОК КНОПКИ УРОВНЯ, ЭТАПЫ, КАРТЫ _start */
+.main-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.stages-difficulty {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* кнопки управления уровнем сложности _Start */
+.difficulty-list {
+  display: flex;
+  /* flex-direction: column; */
+  /* width: 10%; */
+  /* height: fit-content; */
+  align-items: center;
+
+  font-size: calc(10px + (55 - 10) * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 900;
+  /* padding: 5px; */
+  margin: calc(5px + (20 - 5) * ((100vw - 320px) / (1440 - 320))) 0;
+  /* border: 1px solid rgb(255, 255, 255); */
+  /* border-radius: 5px; */
+  transition: all 0.4s ease-in-out;
+
+}
+
+/* .bt-difficulty { */
+.bt {
+  /* font-family: 'Montserrat'; */
+  height: calc(25px + (75 - 25) * ((100vw - 320px) / (1440 - 320)));
+  width: calc(50px + (130 - 50) * ((100vw - 320px) / (1440 - 320)));
+  font-size: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 85px black;
+  background-color: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+
+/* .bt-difficulty:hover { */
+.bt:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.bt:active {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.bt-active {
+  height: calc(30px + (75 - 30) * ((100vw - 320px) / (1440 - 320)));
+  width: calc(60px + (130 - 60) * ((100vw - 320px) / (1440 - 320)));
+  color: rgb(0, 0, 0);
+  font-size: calc(12px + (23 - 12) * ((100vw - 320px) / (1440 - 320)));
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  transform: scale(1.05);
+}
+
+
+
+
+.very-easy {}
+
+.easy {}
+
+.medium {}
+
+.hard {}
+
+.very-hard {}
+
+
+/* кнопки управления уровнем сложности _end */
+
+
+/* БЛОК ЭТАПЫ ИГРЫ _start */
+/* обертка этапов */
+.stages-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.stages {
+  display: flex;
+  /* flex-direction: column; */
+  font-size: calc(18px + (23 - 18) * ((100vw - 320px) / (1440 - 320)));
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  /* border: 1px solid rgb(255, 255, 255); */
+  /* align-self: flex-start; */
+  /* align-items: center; */
+  justify-content: space-between;
+  transition: all 0.4s ease-in-out;
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 5px;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px;
+
+
+}
+
+.stage__points {
+  display: flex;
+  text-align: center;
+}
+
+.stage__text {
+  text-shadow: 0px 0px 85px black;
+  text-align: center;
+
+}
+
+.green {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: calc(20px + (35 - 20) * ((100vw - 320px) / (1440 - 320)));
+  width: calc(20px + (35 - 20) * ((100vw - 320px) / (1440 - 320)));
+  background-color: rgba(0, 128, 0, 0.7);
+  border-radius: 50%;
+  box-shadow: inset 0em 0em 0.2em 0em rgb(0, 0, 0);
+
+
+}
+
+.yellow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(20px + (35 - 20) * ((100vw - 320px) / (1440 - 320)));
+  width: calc(20px + (35 - 20) * ((100vw - 320px) / (1440 - 320)));
+  /* color: rgb(0, 0, 0); */
+  background-color: rgba(255, 255, 0, 0.7);
+  border-radius: 50%;
+  margin: 0 5px;
+  /* border: 1px solid currentColor; */
+  box-shadow: inset 0em 0em 0.2em 0em rgb(0, 0, 0);
+
+
+
+
+}
+
+.blue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(20px + (35 - 20) * ((100vw - 320px) / (1440 - 320)));
+  width: calc(20px + (35 - 20) * ((100vw - 320px) / (1440 - 320)));
+  background-color: rgba(0, 123, 255, 0.7);
+  border-radius: 50%;
+  box-shadow: inset 0em 0em 0.2em 0em rgb(0, 0, 0);
+
+
+
+}
+
+/* БЛОК ЭТАПЫ ИГРЫ _end */
+
+
+
+/* БЛОК с картами _start  */
+.cards {
+  display: flex;
+  margin-top: calc(20px + (150 - 20) * ((100vh - 600px) / (900 - 600)));
+  transition: all 0.4s ease-in-out;
+}
+
+/* блок с картинкой карты */
+.card {
+
+  width: calc(90px + (278 - 90) * ((100vw - 320px) / (1440 - 320)));
+  height: calc(130px + (401 - 130) * ((100vw - 320px) / (1440 - 320)));
+  box-shadow: inset 0em 0em 1em 0em rgb(0, 0, 0), 0em 0em 1em 0em rgb(0, 0, 0);
+  border-radius: calc(8px + (20 - 8) * ((100vw - 320px) / (1440 - 320)));
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px;
+  overflow: hidden;
+
+}
+
+
+/* картинка карты */
+.card__img {
+
+  box-shadow: inset 1em 1em 3em 1em rgb(0, 0, 0);
+}
+
+/* БЛОК С РУБАШКОЙ КАРТЫ */
+.back-card {
+  cursor: pointer;
+}
+
+
+/* БЛОК с картами _end  */
+
+
+/* БЛОК КНОПКИ УРОВНЯ, ЭТАПЫ, КАРТЫ _end */
+
+/*=== ширина меньше 809px _start ======================================== */
+@media screen and (max-width: 809px) {
+
+  /* кнопки убрать padding */
+  .bt {
+    padding: 0;
+  }
+
+
+  .stages-difficulty {
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  /* обертка этапов */
+  .stages-wrap {
+    flex-direction: column;
+  }
+
+  /* БЛОК ЭТАПЫ ИГРЫ _start */
+  .stages {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.4s ease-in-out;
+  }
+
+  /* кнопки управления уровнем сложности _Start */
+  .difficulty-list {
+    flex-direction: column;
+    width: calc(70px + (150 - 70) * ((100vw - 320px) / (1440 - 320)));
+    border: none;
+    margin: 0 15px 0 0;
+  }
+
+  .new-deck__bt {
+    justify-self: start;
+  }
+
+  /* БЛОК ЭТАПЫ ИГРЫ _end */
+
+}
+
+
+
+/*=== ширина меньше 401px _start ======================================== */
+@media screen and (max-width: 401px) {
+  .main-area {
+    justify-content: center;
+  }
+}
+
+/*=== ширина меньше 401px _end ======================================== */
+
+
+
+/* высота экрана  меньше 650px _start ======================================== */
+@media screen and (max-height: 750px) {
+
+  /* блок с картинкой Древнего */
+  .ancients__item {
+    position: relative;
+    display: flex;
+    /* width: calc(90px + (240 - 90) * ((100vw - 320px) / (1440 - 320))); */
+    height: calc(200px + (290 - 200) * ((100vh - 600px) / (900 - 600)));
+    /* width: auto; */
+    border-radius: 5px;
+    box-shadow: 12px 12px 10px rgba(0, 0, 0, 0.337);
+    z-index: 0;
+    /* overflow: hidden; */
+    transition: all 0.7s ease-in-out;
+
+  }
+
+  .ancients__item:hover:not(.ancients__item-active) {
+    z-index: 2;
+  }
+
+  .ancients__item-active {
+    z-index: 1;
+  }
+
+  .ancients__item:hover {
+    z-index: 2;
+  }
+
+  /* блок с картинкой карты */
+  .card {
+    width: calc(208px + (278 - 208) * ((100vh - 600px) / (900 - 600)));
+    height: calc(300px + (401 - 300) * ((100vh - 600px) / (900 - 600)));
+
+    box-shadow: inset 0em 0em 1em 0em rgb(0, 0, 0), 0em 0em 1em 0em rgb(0, 0, 0);
+    border-radius: calc(8px + (20 - 8) * ((100vw - 320px) / (1440 - 320)));
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px;
+    overflow: hidden;
+  }
+
+  /* .cards {
+    margin-top: 15px;
+  } */
+}
+
+
+
+/* высота экрана  меньше 650px _end ======================================== */

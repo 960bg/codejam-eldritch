@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>codejam-eldritch</title>
+  <!-- стили -->
+  <link rel="stylesheet" href="src/style/style.css">
+  <!-- иконка в табе -->
+  <link rel="icon" href="src/img/favicon/favicon.ico">
+</head>
+
+<body id="body" class="body">
+  <!-- главный контейнер _start -->
+  <!-- <div class="application"> -->
+
+  <!-- приложение _start -->
+  <div class="wrapper">
+
+    <!-- список карт древних _start -->
+    <div class="ancients">
+    </div>
+    <!-- список карт древних _end -->
+
+
+    <!-- СТАДИИ ИГРЫ, КНОПКИ СЛОЖНОСТИ И КОЛОДЫ КАРТ _start -->
+    <div class="main-area">
+
+      <!-- СТАДИИ ИГРЫ и КНОПКИ СЛОЖНОСТИ  -->
+      <div class="stages-difficulty">
+        <!-- кнопки упарвления уровнем сложности _start -->
+        <div class="difficulty-list hide-block">
+          <button class="bt-difficulty bt" id="veryEasy">Очень лёгкий</button>
+          <button class="bt-difficulty bt" id="easy">Лёгкий</button>
+          <button class="bt-difficulty bt" id="normal">Средний</button>
+          <button class="bt-difficulty bt" id="hard">Тяжёлый</button>
+          <button class="bt-difficulty bt" id="veryHard">Очень тяжёлый</button>
+        </div>
+        <!-- кнопки упарвления уровнем сложности _end -->
+
+
+        <!-- стадии игры _start -->
+        <div class="stages hide-block">
+
+          <!-- кнопка сдать карты заново _start -->
+          <div class="new-deck">
+            <button class="new-deck__bt bt">Сдать заново</button>
+          </div>
+          <!-- кнопка сдать карты заново _end -->
+
+          <div class="stages-wrap">
+            <div class="stage">
+              <p class="stage__text">Этап I</p>
+              <div class="stage__points">
+                <div class="green stage1_green" id="stage1_green"></div>
+                <div class="yellow stage1_yellow" id="stage1_yellow"></div>
+                <div class="blue stage1_blue" id="stage1_blue"></div>
+              </div>
+            </div>
+            <div class="stage">
+              <p class="stage__text">Этап II</p>
+              <div class="stage__points">
+                <div class="green stage2_green" id="stage2_green"></div>
+                <div class="yellow stage2_yellow" id="stage2_yellow"></div>
+                <div class="blue stage2_blue" id="stage2_blue"></div>
+              </div>
+            </div>
+            <div class="stage">
+              <p class="stage__text">Этап III</p>
+              <div class="stage__points">
+                <div class="green stage3_green" id="stage3_green"></div>
+                <div class="yellow stage3_yellow" id="stage3_yellow"></div>
+                <div class="blue stage3_blue" id="stage3_blue"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- стадии игры _end -->
+
+      </div>
+      <!-- СТАДИИ ИГРЫ и КНОПКИ СЛОЖНОСТИ  _end -->
+
+      <!-- блок для вывода карт на страницу _Start-->
+      <div class="cards hide-block">
+        <!-- блок для рубашки карты по ней выдаем карту -->
+        <div class="back-card card">
+          <!-- src/img/assets/mythicCardBackground.png -->
+          <!-- <img src="" alt="back-card" class="back-card__img card__img"> -->
+        </div>
+        <!-- блок для очередной карты  -->
+        <div class="face-card card">
+          <!-- src/img/assets/MythicCards/blue/blue1.png -->
+          <!-- <img src="" alt="face-card" class="face-card__img card__img"> -->
+        </div>
+
+      </div>
+
+
+      <!-- блок для вывода карты на страницу _end-->
+
+
+
+    </div>
+    <!-- СТАДИИ ИГРЫ, КНОПКИ СЛОЖНОСТИ И КОЛОДЫ КАРТ _end -->
+
+
+
+
+
+
+
+
+    <!-- </div> -->
+    <!-- приложение _end -->
+
+
+  </div>
+  <!-- главный контейнер _end -->
+
+  <!-- блок footer _start-->
+  <section class="footer">
+
+    <!-- блок соц ссылки -->
+
+
+
+    <div class="footer_socia">
+
+      <ul class="footer_ul " id="socia">
+        <li class="git-hub"><a href="https://960bg.github.io/rsschool-cv/" class="link"><img
+              src="src/img/svg/github_1.svg" alt="rs_school" class="soc_li_img" title="гитхаб автора проекта"></a>
+        </li>
+        <li class="rs_school"><a href="https://rs.school/js-stage0/" class="link"><img
+              src="src/img/svg/rs_school_js.svg" alt="youtube" class="soc_li_img" title="страница курса"></a> </li>
+        <li class="social__year">2022</li>
+      </ul>
+
+
+    </div>
+
+
+
+
+
+  </section>
+  <!-- блок footer _end-->
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
